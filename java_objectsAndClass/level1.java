@@ -47,7 +47,7 @@ class Book {
     }
 
     void displayBook() {
-        System.out.println("\n--- Book Details ---");
+        System.out.println("\n");
         System.out.println("Title : " + title);
         System.out.println("Author: " + author);
         System.out.println("Price : " + price);
@@ -66,7 +66,7 @@ class Item {
     }
 
     void displayItem(int qty) {
-        System.out.println("\n--- Item Details ---");
+        System.out.println("items");
         System.out.println("Item Code : " + code);
         System.out.println("Item Name : " + name);
         System.out.println("Item Price: " + price);
@@ -86,7 +86,7 @@ class MobilePhone {
     }
 
     void displayMobile() {
-        System.out.println("\n--- Mobile Details ---");
+        System.out.println("\nMobile Details");
         System.out.println("Brand : " + brand);
         System.out.println("Model : " + model);
         System.out.println("Price : " + price);
@@ -98,7 +98,7 @@ public class level1 {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n====== MENU ======");
+            System.out.println("\n MENU");
             System.out.println("1. Employee Details");
             System.out.println("2. Circle Area & Circumference");
             System.out.println("3. Book Details");
