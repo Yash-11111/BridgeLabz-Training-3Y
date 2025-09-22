@@ -1,8 +1,8 @@
 import java.util.*;
-interface IS{void sch();void resch();void cncl();} // schedulable
+interface IS{void sch();void resch();void cncl();}
 
 class U{
-    String n,e; // name,email
+    String n,e; 
     public U(String n,String e){this.n=n;this.e=e;}
     public void disp(){System.out.println("User:"+n+" Email:"+e);}
 }
@@ -16,14 +16,14 @@ class E{
     public void disp(){System.out.println("Event:"+n+" Loc:"+l+" Date:"+d+" Cost:"+cost+" Attendees:"+att.size());}
 }
 
-class BE extends E implements IS{ // Birthday Event
+class BE extends E implements IS{ 
     public BE(String n,String l,String d){super(n,l,d);}
     public void sch(){setCost(1000);System.out.println("Birthday scheduled, cost:"+getCost());}
     public void resch(){System.out.println("Birthday rescheduled");}
     public void cncl(){System.out.println("Birthday cancelled");}
 }
 
-class CE extends E implements IS{ // Conference Event
+class CE extends E implements IS{ 
     public CE(String n,String l,String d){super(n,l,d);}
     public void sch(){setCost(5000);System.out.println("Conference scheduled, cost:"+getCost());}
     public void resch(){System.out.println("Conference rescheduled");}

@@ -1,8 +1,8 @@
 import java.util.*;
-interface CA{void ec(C c);void dc(C c);} // course actions
+interface CA{void ec(C c);void dc(C c);} 
 
 class P{
-    protected String n,e,id; // person name,email,id
+    protected String n,e,id; 
     public P(String n,String e,String id){this.n=n;this.e=e;this.id=id;}
     public void disp(){System.out.println("Person:"+n+" Email:"+e+" ID:"+id);}
 }

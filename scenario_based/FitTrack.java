@@ -1,28 +1,27 @@
 
-import java.util.*;
-interface IT{void sw();void ew();} // workout abstraction
+interface IT{void sw();void ew();} 
 
 class UP{
-    protected String n;private int a,w;private String g; // name,age,weight,goal
+    protected String n;private int a,w;private String g; 
     public UP(String n,int a,int w,String g){this.n=n;this.a=a;this.w=w;this.g=g;}
     public void disp(){System.out.println("User:"+n+" Age:"+a+" Weight:"+w+" Goal:"+g);}
-    public int getW(){return w;} // encapsulated weight
+    public int getW(){return w;} 
     public void setW(int w){this.w=w;}
 }
 
 class W{
-    protected String t;protected int d;protected double c; // type,duration,calories
+    protected String t;protected int d;protected double c; 
     public W(String t,int d){this.t=t;this.d=d;c=0;}
     public void disp(){System.out.println("Workout:"+t+" Duration:"+d+" Calories:"+c);}
 }
 
-class CW extends W implements IT{ // Cardio
+class CW extends W implements IT{
     public CW(String t,int d){super(t,d);}
     public void sw(){c=d*10;System.out.println("Cardio started");}
     public void ew(){System.out.println("Cardio ended, calories:"+c);}
 }
 
-class SW extends W implements IT{ // Strength
+class SW extends W implements IT{ 
     public SW(String t,int d){super(t,d);}
     public void sw(){c=d*8;System.out.println("Strength started");}
     public void ew(){System.out.println("Strength ended, calories:"+c);}

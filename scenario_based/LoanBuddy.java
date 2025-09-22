@@ -1,10 +1,9 @@
-import java.util.*;
-interface IA{void ap();void emi();} // approvable
+interface IA{void ap();void emi();} 
 
 class App{
-    String n;private int cs;private double inc,la; // name, creditScore, income, loanAmount
+    String n;private int cs;private double inc,la; 
     public App(String n,int cs,double inc,double la){this.n=n;this.cs=cs;this.inc=inc;this.la=la;}
-    public int getCS(){return cs;} // encapsulated
+    public int getCS(){return cs;} 
     public double getInc(){return inc;}
     public double getLA(){return la;}
 }
@@ -16,21 +15,21 @@ class Loan{
     public String getStatus(){return status;}
 }
 
-class PL extends Loan implements IA{ // Personal Loan
+class PL extends Loan implements IA{
     App a;
     public PL(App a,int term,double ir){super("Personal",term,ir);this.a=a;}
     public void ap(){if(a.getCS()>600 && a.getLA()<a.getInc()*5){setStatus("Approved");}else{setStatus("Rejected");}System.out.println("Status:"+getStatus());}
     public void emi(){double R=ir/12/100;int N=term*12;double P=a.getLA();double e=P*R*Math.pow(1+R,N)/(Math.pow(1+R,N)-1);System.out.println("EMI:"+e);}
 }
 
-class HL extends Loan implements IA{ // Home Loan
+class HL extends Loan implements IA{ 
     App a;
     public HL(App a,int term,double ir){super("Home",term,ir);this.a=a;}
     public void ap(){if(a.getCS()>650){setStatus("Approved");}else{setStatus("Rejected");}System.out.println("Status:"+getStatus());}
     public void emi(){double R=ir/12/100;int N=term*12;double P=a.getLA();double e=P*R*Math.pow(1+R,N)/(Math.pow(1+R,N)-1);System.out.println("Home EMI:"+e);}
 }
 
-class AL extends Loan implements IA{ // Auto Loan
+class AL extends Loan implements IA{ 
     App a;
     public AL(App a,int term,double ir){super("Auto",term,ir);this.a=a;}
     public void ap(){if(a.getCS()>620 && a.getLA()<a.getInc()*3){setStatus("Approved");}else{setStatus("Rejected");}System.out.println("Status:"+getStatus());}

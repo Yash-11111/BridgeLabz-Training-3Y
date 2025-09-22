@@ -1,9 +1,9 @@
-interface I{void f();void p();void s();} // interactable
+interface I{void f();void p();void s();}
 
 class Pet{
-    protected String n,t;protected int a;private int h,m; // name,type,age,hunger,mood
-    public Pet(String n,String t,int a){this.n=n;this.t=t;this.a=a;h=50;m=50;} // default
-    public void setMood(int m){this.m=m;} // encapsulated
+    protected String n,t;protected int a;private int h,m; 
+    public Pet(String n,String t,int a){this.n=n;this.t=t;this.a=a;h=50;m=50;} 
+    public void setMood(int m){this.m=m;} 
     public int getMood(){return m;}
     public void setHunger(int h){this.h=h;}
     public int getHunger(){return h;}

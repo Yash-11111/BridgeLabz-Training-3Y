@@ -1,20 +1,20 @@
 import java.util.*;
-interface ID{void ad(double d);} // discountable
+interface ID{void ad(double d);} 
 
 class B{
-    String t,a;private double p;private int s; // title,author,price,stock
+    String t,a;private double p;private int s; 
     public B(String t,String a,double p,int s){this.t=t;this.a=a;this.p=p;this.s=s;}
-    public void updStock(int q){s-=q;} // encapsulated stock update
+    public void updStock(int q){s-=q;} 
     public double getP(){return p;}
     public void disp(){System.out.println("Book:"+t+" Author:"+a+" Price:"+p+" Stock:"+s);}
 }
 
-class EB extends B implements ID{ // EBook
+class EB extends B implements ID{ 
     public EB(String t,String a,double p,int s){super(t,a,p,s);}
     public void ad(double d){System.out.println("EBook discount:"+d);}
 }
 
-class PB extends B implements ID{ // PrintedBook
+class PB extends B implements ID{
     public PB(String t,String a,double p,int s){super(t,a,p,s);}
     public void ad(double d){System.out.println("PrintedBook discount:"+d);}
 }

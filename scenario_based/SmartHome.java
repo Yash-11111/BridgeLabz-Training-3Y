@@ -1,7 +1,7 @@
-interface C{void on();void off();} // control abstraction
+interface C{void on();void off();} 
 
 class A{
-    protected String n;protected int p; // name, power
+    protected String n;protected int p; 
     public A(String n,int p){this.n=n;this.p=p;}
     public void disp(){System.out.println("Appliance:"+n+" Power:"+p);}
 }
@@ -25,7 +25,7 @@ class AC extends A implements C{
 }
 
 class UC{
-    public void ctrl(C c,boolean state){if(state)c.on();else c.off();} // user control
+    public void ctrl(C c,boolean state){if(state)c.on();else c.off();} 
 }
 
 public class SmartHome{

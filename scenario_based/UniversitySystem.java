@@ -1,10 +1,10 @@
-interface G{void ag(String g);} // grading abstraction
+interface G{void ag(String g);}
 
 class S{
-    private String n;private double gpa; // name, GPA
-    public S(String n){this.n=n;gpa=0;} // student create
-    public String tr(){return n+" GPA:"+gpa;} // transcript
-    public void setG(double g){gpa=g;} // gpa set
+    private String n;private double gpa; 
+    public S(String n){this.n=n;gpa=0;}
+    public String tr(){return n+" GPA:"+gpa;} 
+    public void setG(double g){gpa=g;} 
     public void disp(){System.out.println("Student:"+tr());}
 }
 

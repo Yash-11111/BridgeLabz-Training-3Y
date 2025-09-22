@@ -1,5 +1,4 @@
-import java.util.*;
-interface T{void tf(User r,double a);} // transfer abstraction
+interface T{void tf(User r,double a);} 
 
 class User{
     String n;Wallet w;
@@ -10,9 +9,9 @@ class User{
 class Wallet{
     private double b;
     public Wallet(double b){this.b=b;}
-    public double getB(){return b;} // balance access
-    public void add(double a){b+=a;} // load money
-    public void deduct(double a){b-=a;} // deduct money
+    public double getB(){return b;} 
+    public void add(double a){b+=a;} 
+    public void deduct(double a){b-=a;} 
 }
 
 class PersonalWallet extends Wallet implements T{
@@ -39,7 +38,7 @@ public class EwallletApplication{
         PersonalWallet pw=new PersonalWallet(u1.w.getB());
         BusinessWallet bw=new BusinessWallet(u2.w.getB());
 
-        pw.tf(u2,1000);bw.tf(u1,500);pw.tf(u2,6000); // transfers
+        pw.tf(u2,1000);bw.tf(u1,500);pw.tf(u2,6000); 
 
         u1.disp();u2.disp();
     }

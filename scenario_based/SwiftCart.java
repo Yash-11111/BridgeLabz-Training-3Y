@@ -1,17 +1,17 @@
 import java.util.*;
-interface IC{void gb();void ad(double d);} // checkout abstraction
+interface IC{void gb();void ad(double d);} 
 
 class P{
-    String n,c;double p; // name, category, price
+    String n,c;double p; 
     public P(String n,double p,String c){this.n=n;this.p=p;this.c=c;}
     public void disp(){System.out.println("Product:"+n+" Price:"+p+" Cat:"+c);}
 }
 
-class PP extends P{ // Perishable
+class PP extends P{ 
     public PP(String n,double p){super(n,p,"Perishable");}
 }
 
-class NP extends P{ // Non-Perishable
+class NP extends P{ 
     public NP(String n,double p){super(n,p,"Non-Perishable");}
 }
 
@@ -20,7 +20,7 @@ class Cart implements IC{
     public Cart(){tp=0;}
     public Cart(ArrayList<P> l){pl=l;calcTP();}
     public void add(P p){pl.add(p);tp+=p.p;}
-    private void calcTP(){tp=0;for(P p:pl) tp+=p.p;} // total price calc
+    private void calcTP(){tp=0;for(P p:pl) tp+=p.p;} 
     public void gb(){System.out.println("Total Bill:"+tp);}
     public void ad(double d){tp-=d;System.out.println("After Discount:"+tp);}
     public void disp(){for(P p:pl) p.disp();}
@@ -32,6 +32,6 @@ public class SwiftCart{
         P p2=new NP("Soap",30);
         Cart c=new Cart();
         c.add(p1);c.add(p2);
-        c.disp();c.gb();c.ad(10); // add discount
+        c.disp();c.gb();c.ad(10); 
     }
 }

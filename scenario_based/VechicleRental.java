@@ -1,7 +1,7 @@
-interface R{double rnt(int d);} // rent abstraction
+interface R{double rnt(int d);}
 
 class V{
-    protected String n;protected double b; // name, base
+    protected String n;protected double b; 
     public V(String n,double b){this.n=n;this.b=b;} 
     public void d(){System.out.println("Veh:"+n+" Base:"+b);}
 }

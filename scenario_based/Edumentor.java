@@ -1,8 +1,7 @@
-import java.util.*;
-interface IC{void gc();} // certificate abstraction
+interface IC{void gc();} 
 
 class U{
-    protected String n,e,id; // name,email,userId
+    protected String n,e,id; 
     public U(String n,String e,String id){this.n=n;this.e=e;this.id=id;}
     public void disp(){System.out.println("User:"+n+" Email:"+e+" ID:"+id);}
 }
@@ -18,8 +17,8 @@ class I extends U implements IC{
 
 class Q{
     private String[] qs,ans;private int sc;
-    public Q(String[] qs,String[] ans){this.qs=qs;this.ans=ans;sc=0;} // quiz init
-    public void take(String[] ua){for(int i=0;i<ua.length;i++) if(ua[i].equals(ans[i])) sc++;} // score
+    public Q(String[] qs,String[] ans){this.qs=qs;this.ans=ans;sc=0;} 
+    public void take(String[] ua){for(int i=0;i<ua.length;i++) if(ua[i].equals(ans[i])) sc++;} 
     public double getPerc(){return (double)sc/qs.length*100;}
     public void disp(){System.out.println("Score:"+sc+" Percent:"+getPerc());}
 }

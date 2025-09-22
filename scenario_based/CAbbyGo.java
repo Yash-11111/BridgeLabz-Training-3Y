@@ -1,8 +1,8 @@
 import java.util.*;
-interface RS{void br(int d);void er();} // ride service abstraction
+interface RS{void br(int d);void er();} 
 
 class V{
-    protected String no,type;protected int cap;private double fare; // vehicle
+    protected String no,type;protected int cap;private double fare; 
     public V(String no,String t,int c){this.no=no;type=t;cap=c;fare=0;}
     public void setFare(double f){fare=f;} 
     public double getFare(){return fare;}
@@ -28,7 +28,7 @@ class SUV extends V implements RS{
 }
 
 class D{
-    private String n,lic;private double r; // driver
+    private String n,lic;private double r; 
     public D(String n,String l,double r){this.n=n;lic=l;this.r=r;}
     public void disp(){System.out.println("Driver:"+n+" License:"+lic+" Rating:"+r);}
 }
